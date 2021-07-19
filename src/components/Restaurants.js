@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import addRestaurant from '../actions/restaurants';
  
 class Restaurants extends Component {
 
@@ -21,6 +20,5 @@ const mapStateToProps = state => {
   return { restaurants: state.restaurants }
 }
 
-// export default connect(mapStateToProps)(Restaurants);
 
-export default connect(state => ({ items: state.items }), { addRestaurant })(Restaurants);
+export default connect(mapStateToProps)(Restaurants);
