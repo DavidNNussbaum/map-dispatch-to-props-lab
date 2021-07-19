@@ -23,7 +23,7 @@ export class RestaurantInput extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.dispatch({type: 'ADD_RESTAURANT', name: this.state, location: this.state})
+    this.props.addRestaurant(this.state)
   }
 
   render() {
